@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Моя первая mini app</title>
+    <title>Gift Mini App</title>
+
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
-    <h1>Привет, это моя mini app 👋</h1>
-    <p>Если ты видишь этот текст — всё работает.</p>
+    <h1>🎁 Gift Mini App</h1>
+    <p>Каталог подарков в Telegram</p>
 
+    <div id="gifts"></div>
+
+    <!-- Telegram SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- Логика приложения -->
+    <script src="app.js"></script>
   </body>
 </html>
