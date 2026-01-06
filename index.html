@@ -1,23 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Gift Mini App</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Gift Finder — Telegram Mini App</title>
 
-    <!-- Подключаем стили -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+  <!-- Telegram SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    <h1>🎁 Gift Mini App</h1>
-    <p>Каталог подарков в Telegram</p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div id="gifts"></div>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
 
-    <!-- Telegram SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-    <!-- Логика приложения -->
-    <script src="app.js"></script>
-  </body>
+    .block {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    select {
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    button {
+      margin-top: 10px;
+      background: #2ea6ff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #results {
+      margin-top: 20px;
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #2ea6ff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎁 Gift Finder</h1>
+
+  <div class="block">
+    <label>Модель</label>
+    <select id="model"></select>
+  </div>
+
+  <div class="block">
+    <label>Фон</label>
+    <select id="background"></select>
+  </div>
+
+  <div class="block">
+    <label>Символ</label>
+    <select id="symbol"></select>
+  </div>
+
+  <button id="search">🔍 Найти похожие подарки</button>
+
+  <div id="results"></div>
+
+  <script src="app.js"></script>
+
+</body>
 </html>
